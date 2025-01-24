@@ -119,8 +119,6 @@ async def main():
 
     new_keys = generate_new_private_keys(len(old_keys))
 
-    await write_private_keys("new_private_keys.txt", new_keys)
-
     semaphore = asyncio.Semaphore(MAX_WORKERS)
 
     tasks = [
